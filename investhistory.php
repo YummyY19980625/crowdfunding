@@ -31,6 +31,7 @@
                 echo "<tr><td>$datarow</td><td>$_SESSION[userid]</td><td>0</td><td>0</td><td>0</td></tr>";
 
         ?>
-        </table>            
+        </table>  
+        <a href="logout.php">log out</a>
     </body>
 </html>

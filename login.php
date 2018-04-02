@@ -29,10 +29,10 @@
             echo "<script>alert('login success $row[isentre]  $_SESSION[userid]');</script>";
             
             if($row['isentre'] == 't'){
-                header("Location: startproject.php");
+                header("Location: profile_ent.php");
                 exit;
             } else if($row['isentre'] == 'f'){
-                header("Location: invest.php");
+                header("Location: profile_inv.php");
                 exit;
             }
             

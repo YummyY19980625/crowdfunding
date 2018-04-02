@@ -39,5 +39,7 @@
 	   }
     }    
     ?>
+    <a href="logout.php">log out</a>
+    <a href="projecthistory.php"> project histroy</a>
 </body>
 </html>

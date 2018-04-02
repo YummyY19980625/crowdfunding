@@ -19,6 +19,7 @@ session_start();
     
     $flag = false;
     $flag_1 = false;
+    $flag_2 = false;
     
     echo "<ul><form acction=invest.php method='POST' >  
     	<li>project_id:</li>  
@@ -47,7 +48,7 @@ session_start();
         $sql_2 = "select asset  from investor_is where i_id = '$id'";
         $result_2 = pg_query($db,$sql_2);
         $row_2 = pg_fetch_assoc($result_2);
-        if($row_2['asset'] >= $_POST['amount']){
+        if($row_2['asset'] >= $_POST['amount'] && $_POST['amount']>=0){
             $flag_2 = true;
         } else{
             echo "<script>alert(' $id $row_2[asset]! ');</script>";
@@ -60,6 +61,19 @@ session_start();
         $result_3 = pg_query($db,$sql_3);
         $row_3 = pg_fetch_assoc($result_3);
         $round = $row_3['current'] + 1;
+        //-------------------------------------------------------------
+        $sql_4 = "select sum(amount) as total
+                  from invest
+                  group by in_id,p_id
+                  where in_id = '$id' and p_id ='$_POST[pid]'";
+        $result_s = pg_query($db,$sql_4);
+        $row_s = pg_fetch_assoc($result_s);
+        $sum = $row_s['total'];
+        if($_POST['amount']<0 && $sum + $_POST['amount']>=0){
+            $flag_2 = true;
+        } else{
+            echo "<script>alert(' cannot retrieve! ');</script>";
+        }
         //-------------------------------------------------------------
         if($flag == true && $flag_2 == true){
             $sql_insert = "insert into invest values('$date', '$_POST[amount]', $round,'$id','$_POST[pid]')";  
@@ -79,6 +93,7 @@ session_start();
     }
     
     ?>
-    <a href="investhistory.php">This is a link</a>
+    <a href="investhistory.php">invest history</a>
+    <a href="logout.php">log out</a>
 </body>
 </html>

@@ -25,6 +25,10 @@
     echo "<br>Contact number: $name[contact_number] <br>";
     echo "<br>Current asset: $name[asset] <br>";
     ?>
+    
+    <a href="invest.php">invest</a>
+    <a href="logout.php">log out</a>
+    <a href="info_change_inv.php">info change</a>
 
 
 
