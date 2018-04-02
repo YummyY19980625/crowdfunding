@@ -16,7 +16,7 @@
 
     }
 
-    $id = $_SESSION["userid"]    
+    $id = $_SESSION["userid"];    
 
     $sql1 = "select * from entrepreneurs_is where e_id = '$id'";
 
