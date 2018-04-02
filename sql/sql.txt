@@ -2,10 +2,10 @@ Create table users(
  id varchar(32) primary key,
  password varchar(32) not null,
 isEntre boolean not null,
-check(password like '______%¡¯)
+check(password like '______%')
 );
 
-Create table Investor_Is(
+Create table investor_is(
 i_id varchar(32) references users(id),
 name varchar(32) not null,
 email varchar(32) not null,
@@ -14,7 +14,7 @@ asset numeric not null,
 primary key(i_id)
 );
  
-Create table Entrepreneurs_Is(
+Create table entrepreneurs_is(
 e_id varchar(32) references users(id),
 name varchar(32)  not null,
 email varchar(32) not null,
@@ -31,13 +31,14 @@ description varchar(512) not null,
 current_invest numeric default 0,
 expected_invest numeric not null,
 type varchar(32) not null,
-en_id varchar(32)  references Entrepreneurs_Is(e_id)
+en_id varchar(32)  references entrepreneurs_Is(e_id)
 );
 
+create table invest(
 invest_date date not null,
 amount numeric not null,
 round integer not null default 0,
-in_id  varchar(32) references Investor_Is(i_id),
+in_id  varchar(32) references investor_Is(i_id),
 p_id varchar(32) references start_project(project_id),
 primary key (p_id,in_id,round)
 );
