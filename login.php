@@ -20,10 +20,22 @@
         
         if ($num) {
             
-            echo "<script>alert('login success');</script>";
+            
             $_SESSION['status'] = 1;
-            $_SESSION['username'] = $username;
+            $_SESSION['userid'] = $id;
             $_SESSION['password'] = $password;
+            $row = pg_fetch_assoc($result);
+            echo"$row[isentre]";
+            echo "<script>alert('login success $row[isentre]  $_SESSION[userid]');</script>";
+            
+            if($row['isentre'] == 't'){
+                header("Location: startproject.php");
+                exit;
+            } else if($row['isentre'] == 'f'){
+                header("Location: invest.php");
+                exit;
+            }
+            
              
         } else {
         

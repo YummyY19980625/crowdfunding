@@ -25,7 +25,7 @@
     </form>
   </ul>
     <?php
-    $db = pg_connect("host=localhost port=5432 dbname=Crowdfunding user=postgres password=1234");
+    $db = pg_connect("host=localhost port=5432 dbname=Crowdfunding user=postgres password=980412");
     if(!$db){
         echo "connection failed?";
     }
