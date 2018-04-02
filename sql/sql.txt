@@ -1,0 +1,43 @@
+Create table users(
+ id varchar(32) primary key,
+ password varchar(32) not null,
+isEntre boolean not null,
+check(password like '______%¡¯)
+);
+
+Create table Investor_Is(
+i_id varchar(32) references users(id),
+name varchar(32) not null,
+email varchar(32) not null,
+contact_number varchar(16) not null,
+asset numeric not null,
+primary key(i_id)
+);
+ 
+Create table Entrepreneurs_Is(
+e_id varchar(32) references users(id),
+name varchar(32)  not null,
+email varchar(32) not null,
+address varchar(32) not null,
+primary key(e_id)
+);
+ 
+ Create table start_project(
+project_id varchar(32) primary key,
+title varchar(128) not null,
+start_date  date not null,
+state boolean not null,
+description varchar(512) not null,
+current_invest numeric default 0,
+expected_invest numeric not null,
+type varchar(32) not null,
+en_id varchar(32)  references Entrepreneurs_Is(e_id)
+);
+
+invest_date date not null,
+amount numeric not null,
+round integer not null default 0,
+in_id  varchar(32) references Investor_Is(i_id),
+p_id varchar(32) references start_project(project_id),
+primary key (p_id,in_id,round)
+);

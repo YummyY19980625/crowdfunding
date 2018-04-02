@@ -1,0 +1,60 @@
+users:
+insert into users values(¡®u001¡¯,¡¯users001¡¯,false);
+insert into users values('u002','users002',false);
+insert into users values('u003','users003',false);
+insert into users values('u004','users004',false);
+insert into users values('u005','users005',false);
+insert into users values('u006','users006',false);
+insert into users values('u007','users007',false);
+insert into users values('u008','users008',false);
+insert into users values('u009','users009',false);
+insert into users values('u010','users010',false);
+
+insert into users values('u011','users011',true);
+insert into users values('u012','users012',true);
+insert into users values('u013','users013',true);
+insert into users values('u014','users014',true);
+insert into users values('u015','users015',true);
+insert into users values('u016','users016',true);
+insert into users values('u017','users017',true);
+insert into users values('u018','users018',true);
+insert into users values('u019','users019',true);
+insert into users values('u020','users020',true);
+
+investor_is:
+INSERT INTO Investor_Is Values('u001', 'Adobe', 'adobe@gmail.com', '32132122', 10000000);
+INSERT INTO Investor_Is Values('u002', 'Aaron', 'aaron@gmail.com', '53253142', 10000000);
+INSERT INTO Investor_Is Values('u003', 'Baber', 'baber@gmail.com', '76574765', 10000000);
+INSERT INTO Investor_Is Values('u004', 'Bagot', 'bagot@gmail.com', '32491724', 10000000);
+INSERT INTO Investor_Is Values('u005', 'Calvert', 'calvert@gmail.com', '23149741', 10000000);
+INSERT INTO Investor_Is Values('u006', 'Carl', 'carl@gmail.com', '82904821', 10000000);
+INSERT INTO Investor_Is Values('u007', 'Dale', 'dale@gmail.com', '42421423', 10000000);
+INSERT INTO Investor_Is Values('u008', 'Dan', 'dan@gmail.com', '75843955', 10000000);
+INSERT INTO Investor_Is Values('u009', 'Earl', 'earl@gmail.com', '14392471', 10000000);
+INSERT INTO Investor_Is Values('u010', 'Edison', 'edison@gmail.com', '64589684', 10000000);
+
+
+entre_is:(id name email address)
+INSERT INTO entrepreneurs_Is Values('u011','Anek','Anek@gmail.com','ladsnfaunvk');
+INSERT INTO entrepreneurs_Is Values('u012','Banoka Company','Banoka@gmail.com','Clenmenti road 5'); 
+INSERT INTO entrepreneurs_Is Values('u013','Hand Airline','Handair@gmail.com','Clementi road 6'); 
+INSERT INTO entrepreneurs_Is Values('u014','Java Store','Javastore@gmail.com','adfs sdafas asdf asfd&jf'); 
+INSERT INTO entrepreneurs_Is Values('u015','Postgresql','Postgresql@gamil.com','adsf asdflj ewr fdvv g'); 
+
+
+start_project(15): project_id title startdate state description current expected type entreid
+insert into start_project values('pr001','Bicycle','2018-01-03',true,'Sharing bicycle',0,20000000,'commercial','u011');
+insert into start_project values('pr002','Senior citizen','2018-01-04',true,'helping senior citizens',0,8000000,'charity','u011');
+insert into start_project values('pr003','Pandan TV','2018-01-05',true,'A live multimedia platform',0,40000000,'entertainment','u012');
+insert into start_project values('pr004','Fight Fish TV','2018-01-06',true,'A live multimedia platform',0,10000000,'entertainment','u013');
+insert into start_project values('pr005','FF91','2018-01-07',true,'design a new type of car',0,20000000,'commercial','u012');
+insert into start_project values('pr006',' PUBG','2018-01-08',true,'game development',0,20000000,'commercial','u013');
+insert into start_project values('pr007','IVLE','2018-01-09',true,'IVLE for NUS students',0,20000000,'education','u015');
+insert into start_project values('pr008','pgadmin','2018-01-10',true,'Software for public',0,30000000,'software','u015');
+insert into start_project values('pr009','bitamina','2018-01-11',true,'Software for public, virtual server',0,20000000,'software','u015');
+insert into start_project values('pr010','Wanda hotel','2018-01-12',true,'A great hotel',0,50000000,'commercial','u012');
+insert into start_project values('pr011','Hope Primary School','2018-01-03',true,'building a school for the children who cannot pay for their education',0,20000000,'charity','u013');
+insert into start_project values('pr012','Outlast2','2018-01-23',true,'A thril game ',0,20000000,'game','u013');
+insert into start_project values('pr013','Swimming pool','2018-01-20',true,'Build a swimming pool at PGP ',0,30000000,'commercial','u013');
+insert into start_project values('pr014','Walking again','2018-01-06',true,'help the people who are suffering from disability ',0,20000000,'charity','u015');
+insert into start_project values('pr015','Iron mic','2018-01-01',true,'freestyle battle match ',0,8000000,'commercial','u013');
